@@ -1,5 +1,5 @@
 const celdas = [];
-const RETICULA = 10;
+const RETICULA = 40;
 let ancho; //ancho de la celda
 let alto; //alto de la celda
 
@@ -10,56 +10,56 @@ const reglas = [
     {
         //title 0
         UP:0,
-        RIGHT:0,
-        DOWN: 0,
+        RIGHT:1,
+        DOWN: 1,
         LEFT: 0,
     },
     {
         //title 1
         UP:0,
-        RIGHT:1,
+        RIGHT:0,
         DOWN: 1,
-        LEFT: 0,
+        LEFT: 1,
     },{
         //title 2
         UP:0,
-        RIGHT:1,
-        DOWN: 1,
+        RIGHT:0,
+        DOWN: 0,
         LEFT: 1,
     },{
         //title 3
         UP:0,
         RIGHT:0,
-        DOWN: 1,
-        LEFT: 1,
+        DOWN: 0,
+        LEFT: 0,
     },{
         //title 4
-        UP:0,
-        RIGHT:0,
+        UP:1,
+        RIGHT:1,
         DOWN: 0,
         LEFT: 0,
     },{
         //title 5
         UP: 1,
+        RIGHT:0,
+        DOWN: 0,
+        LEFT: 1,
+    },{
+        //title 6
+        UP:0,
         RIGHT:1,
         DOWN: 1,
         LEFT: 0,
     },{
-        //title 6
-        UP:1,
-        RIGHT:1,
-        DOWN: 1,
-        LEFT: 1,
-    },{
         //title 7
-        UP:1,
+        UP:0,
         RIGHT:0,
         DOWN: 1,
         LEFT: 1,
     },{
         //title 8
         UP:0,
-        RIGHT:1,
+        RIGHT:0,
         DOWN: 0,
         LEFT: 0,
     },{
@@ -67,13 +67,13 @@ const reglas = [
         UP:1,
         RIGHT:1,
         DOWN: 0,
-        LEFT: 1,
+        LEFT: 0,
     },{
         //title 10
         UP:1,
         RIGHT:1,
         DOWN: 0,
-        LEFT: 1,
+        LEFT: 0,
     },{
         //title 11
         UP:1,
@@ -115,7 +115,12 @@ function setup() {
 
 function draw() {
     //background(100);
-    const celdasDisponibles = celdas.filter((celda) => celda.colapsada == false);
+    
+    const celdasConOpciones = celdas.filter((celda) => {
+        return celda.opciones.length > 0;
+    });
+
+    const celdasDisponibles = celdasConOpciones.filter((celda) => celda.colapsada == false);
     if(celdasDisponibles.length > 0){
         celdasDisponibles.sort((a,b)=>a.opciones.length - b.opciones.length);
         const celdasPorColapsar = celdasDisponibles.filter((celda)=> {
@@ -172,7 +177,7 @@ function draw() {
                     }
                 }
             }else{
-                rect(x * ancho, y * alto, ancho, alto);
+                //rect(x * ancho, y * alto, ancho, alto);
             }
         }
         }
