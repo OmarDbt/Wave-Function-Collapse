@@ -37,25 +37,7 @@ const reglas = [
     { UP: 5, RIGHT: 1, DOWN: 0, LEFT: 3 }, //26
     { UP: 4, RIGHT: 3, DOWN: 0, LEFT: 1 }, //27
     { UP: 6, RIGHT: 4, DOWN: 0, LEFT: 4 }, //28
-    //{ UP: 2, RIGHT: 0, DOWN: 0, LEFT: 3 }, //29
-    //{ UP: 5, RIGHT: 6, DOWN: 0, LEFT: 0 }, //30
-    //{ UP: 4, RIGHT: 0, DOWN: 8, LEFT: 5 }, //31
-    //{ UP: 7, RIGHT: 0, DOWN: 7, LEFT: 0 }, //32
-    //{ UP: 4, RIGHT: 2, DOWN: 3, LEFT: 5 }, //33
-    //{ UP: 6, RIGHT: 4, DOWN: 5, LEFT: 2 }, //34
-    //{ UP: 2, RIGHT: 6, DOWN: 1, LEFT: 4 }, //35
-    //{ UP: 4, RIGHT: 2, DOWN: 3, LEFT: 6 }, //36
-    //{ UP: 6, RIGHT: 4, DOWN: 5, LEFT: 2 }, //37
-    //{ UP: 2, RIGHT: 6, DOWN: 1, LEFT: 4 }, //38
-    //{ UP: 4, RIGHT: 2, DOWN: 3, LEFT: 6 }, //39
-    //{ UP: 6, RIGHT: 4, DOWN: 5, LEFT: 6 }, //40
-    //{ UP: 3, RIGHT: 1, DOWN: 2, LEFT: 4 }, //41
-    //{ UP: 5, RIGHT: 3, DOWN: 4, LEFT: 1 }, //42
-    //{ UP: 1, RIGHT: 5, DOWN: 6, LEFT: 3 }, //43
-    //{ UP: 3, RIGHT: 1, DOWN: 2, LEFT: 5 }, //44
-    //{ UP: 5, RIGHT: 3, DOWN: 4, LEFT: 1 }, //45
-    //{ UP: 1, RIGHT: 5, DOWN: 6, LEFT: 3 }, //46
-    //{ UP: 3, RIGHT: 1, DOWN: 2, LEFT: 5 }  //47
+
 ];
 
 const NA = reglas.length;  //numero de azulejos
